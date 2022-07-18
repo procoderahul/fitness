@@ -1,0 +1,275 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+} 
+body{
+    background-repeat: no-repeat;
+    background-attachment: fixed;  
+    background-size: cover;
+    min-height: 100vh;
+    position: relative; 
+    width: 100%;
+    color: #fff;
+} 
+nav{
+  display:flex;
+  height:100px;
+  width:100%;
+  background:#000;
+  align-items: center;
+  justify-content:space-between;
+  padding:0 50px 0 100px;
+  flex-wrap: wrap;
+}
+nav .logo p{
+  color: white;
+  position: relative;
+  left: 75px;
+  bottom: 73px;
+  font-size: 30px;
+  font-weight: 500;
+  font-family: algerian;
+}
+nav .logo img{
+  position: relative;
+  top: 3px;
+  padding: 3px;
+  height: 100px;
+  width: 100px;
+  -webkit-filter: invert(1);
+  filter: invert(1);
+}
+
+nav ul{
+  display:flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+}
+nav ul li{
+  margin:0 5px;
+}
+nav ul li a{
+  color:#f2f2f2;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  position: relative;
+  bottom: 15px;
+  padding:8px 15px;
+  border-radius: 32px;
+  letter-spacing:1px;
+  border-bottom:1.5px solid transparent;
+  transition:all 0.7s ease;
+}
+nav ul li a.active,
+nav ul li a:hover{
+  border-color:orange;
+  color:orange;
+}
+nav .menu-btn i{
+  color:#fff;
+  font-size:22px;
+  cursor: pointer;
+  display:none;
+}
+input[type="checkbox"]{
+  display:none;
+}
+
+@media (max-width:1000px){
+  nav{
+    padding:0 40px 0px 50px;
+  }
+}
+@media (max-width:920px){
+  nav .menu-btn i{
+    display:block;
+  }
+  #click:Checked ~ .menu-btn i:before{
+    content:'\f00d';
+  }
+  nav ul{
+    position:fixed;
+    top:80px;
+    left:-100%;
+    background:#111;
+    height:100vh;
+    width:100%;
+    text-align: center;
+    z-index:10;
+    display:block;
+    transition:all 0.3s ease;
+  }
+  #click:Checked ~ ul {
+    left:0px;
+  }
+  nav ul li{
+    width:100%;
+    margin:40px 0;
+  }
+  nav ul li a{
+    width:100%;
+    margin-left:-100%;
+    display:block;
+    font-size: 20px;
+    transition:0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  #click:Checked ~ ul li a{
+    margin-left:0px;
+  }
+}
+.lg {
+  opacity: 0.5;
+  padding: 12px;
+  width: 20%;
+  border-radius: 300px;
+}
+.lg:hover {
+  opacity: 0.1;
+}
+.container {
+  border: 2px solid white;
+  padding: 20px;
+  margin: 10px auto;
+}
+.container:hover {
+  background-color: black;
+  color: yellow;
+}
+h3 {
+  text-align: center;
+}
+.btn {
+  background-color: white;
+  color: black;
+  cursor: pointer;
+  border: 2px solid black;
+  border-radius: 32px;
+  padding: 10px;
+}
+.btn:hover {
+  background-color: black;
+  color: white;
+}
+
+footer{
+  position: relative;
+  width: 100%;
+  height: auto;
+  padding: 50px 100px;
+  background: #111;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+footer .contend{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+footer .contend .sec{
+  margin-right: 30px;
+}
+
+footer .contend .sec.aboutus{
+  width: 40%;
+}
+
+footer .contend h2{
+  position: relative;
+  color: #fff;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+footer .contend h2:before{
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 50px;
+  height: 2px;
+  background: #f00;
+}
+
+footer p{
+  color: #999;
+}
+
+.quickLinks{
+  position: relative;
+  width: 25%;
+}
+.quickLinks ul li{
+  list-style: none;
+}
+.quickLinks ul li a{
+  color: #999;
+  text-decoration: none;
+  margin-bottom: 10px;
+  display: inline-block;
+}
+
+.quickLinks ul li a:hover{
+  color: #fff;
+}
+
+.contact{
+  width: calc(35% - 120px);
+  margin-right: 0;
+}
+
+.contact .info{
+  position: relative;
+}
+
+.contact .info li{
+  display: flex;
+  margin-bottom: 16px;
+}
+
+.contact .info li span:nth-child(1){
+  color: #fff;
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+.contact .info li span{
+  color: #999;
+}
+
+.copyrightText{
+  position: relative;
+  width: 100%;
+  background: #181818;
+  padding: 8px 100px;
+  text-align: center;
+  color: #999;
+}
+
+@media (max-width: 991px){
+  footer{
+    padding: 40px;
+  }
+  footer .contend{
+    flex-direction: column;
+  }
+  footer .contend .sec{
+    margin-right: 0;
+    margin-bottom: 40px;
+  }
+  footer .contend .sec.aboutus,
+  .quickLinks,
+  .contact{
+    width: 100%;
+  }
+  .copyrightText{
+    padding: 8px 40px;
+  }
+}
